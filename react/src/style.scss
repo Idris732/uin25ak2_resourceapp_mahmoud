@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variabler for farger og fonter */
+:root {
+  --mainColor: #2a324b;
+  --secondColor: #58699d;
+  --backgroundColor: #e1e5ee;
+  --white: #fff;
+  --font: 'Roboto', sans-serif;
+}
+
+/* Generelle stiler for hele siden */
+body {
+  font-family: var(--font);
+  background-color: var(--backgroundColor);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr;/* Øverste navigasjonsmeny, ressurser vises under */
+}
+/* Meny for navigasjon */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 120px; /* Mindre margin for mobilvisning */
+  margin-bottom: 0;
+  padding: 0;
+}
+
+nav ul li a,
+nav ul li Link {
+  background-color: var(--mainColor);
+  border: none;
+  padding: 30px 75px;
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul li a:focus,
+nav ul li a:hover,
+nav ul li Link:focus,
+nav ul li Link:hover {
+  color: var(--mainColor);
+  background-color: var(--white);
+  transition: ease-in-out 0.2s all;
+}
+
+/* Overskrift på siden */
+h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+/* Sideens hovedinnhold */
+main {
+  margin: 0 20px.5px;
+}
+
+main #resource-article {
+  background-color: var(--white);
+  margin: 0 auto;
+  padding: 30px 73px;
+  min-height: 350px;
+  margin-top: 0;
+}
+
+main #resource-article h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+main #resource-article ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+main #resource-article ul li {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  list-style-type: disc; /* Legger til punktum i listeelementer */
+  margin-left: 30px; 
+}
+
+/*main #resource-article ul li a {
+  color: var(--secondColor);
+  text-decoration: none;
+}*/
+
+main #resource-article ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Tilpasning for større skjermer (desktop) */
+@media (min-width: 768px) {
+  nav ul {
+    margin-top: 80px; 
+    margin-bottom: 30px;
+  }
+
+  main {
+    margin: 0 40px; 
+  }
+}
